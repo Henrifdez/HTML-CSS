@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    background: rgb(136, 184, 255);
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+   
+}
+
+input {
+    display: none;
+    overflow: hidden;
+}
+
+label span {
+    margin-right: 10px;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+}
+
+label input:focus + span {
+    border: 1px solid;
+    box-sizing: border-box ;
+}
+
+label span::before {
+    content: '';
+    display: block;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px;
+    transition: all .2s ease-in-out;
+}
+
+label input:checked + span::before{
+    transform: translateX(30px);
+    background-color: green;
+}
